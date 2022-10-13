@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Properties</h2>
+
+<p>The length property returns the length of a string:</p>
+
+<button onclick="length()">String Length</button>
+
+<p id="demoLength"></p>
+
+<script>
+	
+function length() {
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	document.getElementById("demoLength").innerHTML = text + " = " + text.length;
+}
+</script>
+
+<p>The escape sequence \" inserts a double quote in a string.</p>
+
+<button onclick="escapeSeq()">Insert "Double Quotes"</button>
+<p id="demoDubSeq"></p>
+
+<script>
+function escapeSeq() {
+  let text = "We are the so-called \"Vikings\" from the north.";
+  document.getElementById("demoDubSeq").innerHTML = text; 
+}
+</script>
+
+<p>The slice() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+<button onclick="slice()">Slice it!</button>
+<p id="demoSlice"></p>
+
+<script>
+function slice() {
+  let str = "Apple, Banana, Kiwi";
+  document.getElementById("demoSlice").innerHTML = str + " = before;" + " " + str.slice(7,13) + " = after slice of 7 through 13"; 
+}
+</script>
+
+<p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+<button onclick="substring()">Return in new String</button>
+<p id="demoSubStr"></p>
+
+<script>
+function substring() {
+  let str = "Apple, Banana, Kiwi";
+  document.getElementById("demoSubStr").innerHTML = "original string = " + str + "; and new string = " + str.substring(7,13);
+}
+</script>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="replace()">Try it</button>
+
+<p id="demoReplace">Please visit Microsoft!</p>
+
+<script>
+function replace() {
+  let text = document.getElementById("demoReplace").innerHTML;
+  document.getElementById("demoReplace").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+</script>
+
+<p>Convert string to upper case:</p>
+
+<button onclick="upperC()">Try it</button>
+
+<p id="demoUC">Hello World!</p>
+
+<script>
+function upperC() {
+  let text = document.getElementById("demoUC").innerHTML;
+  document.getElementById("demoUC").innerHTML =
+  text.toUpperCase();
+}
+</script>
+
+<p>Convert string to lower case:</p>
+
+<button onclick="lowerC()">Try it</button>
+
+<p id="demoLC">Hello World!</p>
+
+<script>
+function lowerC() {
+  let text = document.getElementById("demoLC").innerHTML;
+  document.getElementById("demoLC").innerHTML =
+  text.toLowerCase();
+}
+</script>
+
+<p>The concat() method joins two or more strings:</p>
+<button onclick="concat()">Join 2 Strings</button>
+<p id="demoConcat"></p>
+
+<script>
+function concat() {
+  let text1 = "Hello";
+  let text2 = "World!";
+  let text3 = text1.concat(" ",text2);
+  document.getElementById("demoConcat").innerHTML = text3;
+}
+</script>
+
+<h2>The trim() Method</h2>
+<button onclick="trim()">Trim the extra spaces</button>
+<p id="demoTrim"></p>
+
+<script>
+function trim() {
+  let text1 = "     Hello World!     ";
+  let text2 = text1.trim();
+
+  document.getElementById("demoTrim").innerHTML =
+  "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+}
+</script>
+
+<p>The padStart() method pads a string with another string:</p>
+<button onclick="padStart()">Add some padding to beginning</button>
+<p id="demoPadS"></p>
+
+<script>
+function padStart() {
+  let text = "5";
+  document.getElementById("demoPadS").innerHTML = text.padStart(4,"x");
+}
+</script>
+
+<p>The padEnd() method pads a string with another string:</p>
+<button onclick="padEnd()">Add some padding to the end</button>
+<p id="demoPadE"></p>
+
+<script>
+function padEnd() {
+  let text = "5";
+  document.getElementById("demoPadE").innerHTML = text.padEnd(4,"x");
+}
+</script>
+
+<p>The charCodeAt() method returns the unicode of the character at a given position in a string:</p>
+<button onclick="charCode()">Return the Unicode of character at position 7</button>
+<p id="demoCharCode"></p>
+
+<script>
+function charCode() {
+  let text = "HELLO WORLD";
+  document.getElementById("demoCharCode").innerHTML = text.charCodeAt(7);
+}
+</script>
+
+<p>Property access on strings:</p>
+<button onclick="propAccess()">Property Access</button>
+<p id="demoPA"></p>
+
+<script>
+function propAccess() {
+  var str = "HELLO WORLD";
+  document.getElementById("demoPA").innerHTML = str[7];
+}
+</script>
+
+<p>Display the first array element, after a string split:</p>
+<button onclick="split()">Split string into array and return 6th element</button>
+<p id="demoSplit"></p>
+
+<script>
+function split() {
+  let text = "a,b,c,d,e,f";
+  const myArray = text.split(",");
+  document.getElementById("demoSplit").innerHTML = myArray[5];
+}
+</script>
+
+
+
+</body>
+</html>
