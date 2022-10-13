@@ -109,7 +109,7 @@ function concat() {
 }
 </script>
 
-<h2>The trim() Method</h2>
+<p>The trim() Method</p>
 <button onclick="trim()">Trim the extra spaces</button>
 <p id="demoTrim"></p>
 
