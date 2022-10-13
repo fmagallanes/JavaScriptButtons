@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+<p>If you add two numeric strings, the result will be a concatenated string:</p>
+<button onclick="addString()">Can't add two strings like math</button>
+<p id="demoAddS"></p>
+
+<script>
+function addString(){
+  let x = "10";
+  let y = "100";
+  let z = x + y;
+  document.getElementById("demoAddS").innerHTML = x + " + " + y + " = " + z;
+}
+</script>
+
+<p>JavaScript will try to convert strings to numbers when dividing:</p>
+<button onclick="divString()">JS converts strings to nums to divide</button>
+<p id="demoDivS"></p>
+
+<script>
+function divString(){
+  let x = "100";
+  let y = "10";
+  let z = x / y;   
+  document.getElementById("demoDivS").innerHTML = x + " / " + y + " = " + z;
+}
+</script>
+
+<p>A number divided by a non-numeric string becomes NaN (Not a Number):</p>
+<button onclick="nan()">Divide 100 by Apples!</button>
+<p id="demoNaN"></p>
+
+<script>
+function nan(){
+  document.getElementById("demoNaN").innerHTML = 100 / "Apple";
+}
+</script>
+
+<p>Infinity is returned if you calculate a number outside the largest possible number:</p>
+<button onclick="infinity()">Calculate Infinity!</button>
+<p id="demoInfinity"></p>
+
+<script>
+function infinity(){
+  let myNumber = 2; 
+  let txt = "";
+  while (myNumber != Infinity) {
+     myNumber = myNumber * myNumber;
+     txt = txt + myNumber + "<br>";
+  }
+  document.getElementById("demoInfinity").innerHTML = txt;
+}
+</script>
+
+<p>Division by zero generates Infinity;</p>
+<button onclick="infinityDiv()">Divide by 0??</button>
+<p id="demoInfinityDiv"></p>
+
+<script>
+function infinityDiv(){
+  let x = 2/0;
+  let y = -2/0;
+  document.getElementById("demoInfinityDiv").innerHTML = x + "<br>" + y;
+}
+</script>
+
+<p>Numeric constants, preceded by 0x, are interpreted as hexadecimal:</p>
+<button onclick="hex()">Interpret as Hexidecimal</button>
+<p id="demoHex"></p>
+
+<script>
+function hex(){
+  let x = 0xFF;
+  document.getElementById("demoHex").innerHTML = "0xFF = " + x;
+}
+</script>
+
+</body>
+</html>
